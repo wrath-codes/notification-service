@@ -1,10 +1,8 @@
-import { NotificationsController } from './infra/http/controllers/notifications.controller';
-import { PrismaService } from './infra/database/prisma.service';
 import { Module } from '@nestjs/common';
+import { httpModule } from './infra/http/http.module';
+import { DatabaseModule } from './infra/database/database.module';
 
 @Module({
-	imports: [],
-	controllers: [NotificationsController],
-	providers: [PrismaService],
+	imports: [httpModule, DatabaseModule],
 })
 export class AppModule {}

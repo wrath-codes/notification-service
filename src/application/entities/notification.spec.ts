@@ -6,7 +6,6 @@ describe('Notification', () => {
 			content: new Content('New Connection!'),
 			category: 'social',
 			recipientId: 'example-recipient-id',
-			createdAt: new Date(),
 		});
 
 		expect(notification).toBeTruthy();
